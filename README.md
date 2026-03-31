@@ -1,7 +1,7 @@
 # Mobile Money — Distributed UDP Cluster
 
 A 4-node distributed mobile money system in C using UDP sockets and Vector Clocks. **Windows only** (Winsock2).
-
+NB: More nodes can be added.
 ## Configuration (`protocol.h`)
 
 Edit the `CLUSTER` array to set node IPs and ports:
