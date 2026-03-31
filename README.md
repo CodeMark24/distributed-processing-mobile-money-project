@@ -35,9 +35,9 @@ Replace the loopback IPs in `protocol.h` with each machine's actual local or pub
 ```c
 static const Peer CLUSTER[] = {
     {"192.168.1.10", 9001},  // Machine A — Node 0
-    {"192.168.1.11", 9001},  // Machine B — Node 1
-    {"192.168.1.12", 9001},  // Machine C — Node 2
-    {"192.168.1.13", 9001}   // Machine D — Node 3
+    {"192.168.1.11", 9002},  // Machine B — Node 1
+    {"192.168.1.12", 9003},  // Machine C — Node 2
+    {"192.168.1.13", 9004}   // Machine D — Node 3
 };
 ```
 This **same updated `protocol.h`** must be used when compiling both `server.c` and `client.c` on every machine. Each machine then runs `server.exe` with its own index (e.g. Machine B runs `server.exe 1`). Ensure the chosen port is open in each machine's firewall, and that all nodes are reachable from the client machine.
